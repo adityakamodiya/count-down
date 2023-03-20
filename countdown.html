@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count down</title>
+</head>
+<body>
+   <div id="wrapper" style="display: flex;justify-content: center;align-items: center; flex-direction: column;">
+    <h2>count-down</h2>
+    <h1 style="font-size: 50px;font-style: oblique;"></h1>
+   </div>
+   <script>
+    let h1 = document.querySelector("h1")
+    let minute = 5 
+    let second = 60
+    
+  let interval =  setInterval(
+        ()=>
+        {
+            second--
+            if(second==0  && minute ==0 )
+            {
+                clearInterval(interval)
+                alert("timeout")
+            } 
+           else if(second == 0)
+            {
+                --minute
+                second = 60
+            }
+             
+            h1.innerHTML =  minute +":"+second
+        }
+    ,1000)
+    
+// let interval = setInterval(
+//     () =>
+//     {
+//          --second
+         
+//          if(second==1 && minute ==1)
+//          {
+//             clearInterval(interval)
+//          }
+//          h1.innerHTML = second
+//     }
+// ,1000)
+   </script> 
+</body>
+</html>
