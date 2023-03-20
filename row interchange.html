@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            
+        <th>name</th>
+        <th>phone no.</th>
+        </tr>
+        <tr class="row1">
+            <td >aditya</td>
+            <td>12345678</td>
+        </tr>
+        <tr class="row2">
+            <td>dheeraj</td>
+            <td>987654321</td>
+        </tr>
+    </table>
+    <button>click me</button>
+    <script>
+        let button = document.querySelector("button")
+        let row1 = document.querySelector(".row1")
+         let row2 = document.querySelector(".row2")
+         let row1data = row1.innerHTML
+         let row2data = row2.innerHTML
+         console.log(row1data)
+        button.onclick =  ()=>
+        {
+            row1.innerHTML = row2data
+            row2.innerHTML = row1data
+        }
+    </script>
+</body>
+</html>
